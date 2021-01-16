@@ -1,20 +1,23 @@
-import Link from 'next/link';
-import React from 'react';
-import styles from '../styles/Home.module.css';
+import styled from 'styled-components';
+
+const Title = styled.h1`
+  font-size: 10px;
+  background-color: black;
+  color: ${({ theme }) => theme.colors.primary};
+`;
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Link as="/post/1" href="/post/[id]">
-        <a>First Post</a>
-      </Link>
-      <Link as="/post/2" href="/post/[id]">
-        <a>Second Post</a>
-      </Link>
-      <Link href="/login">
-        <a>Login</a>
-      </Link>
-      <h1>Home</h1>
+    <div>
+      <Title>styled-components</Title>
+      <p className="title">styled-jsx</p>
+      <style jsx>{`
+        .title {
+          font: 15px Helvetica, Arial, sans-serif;
+          background: #eee;
+          color: blue;
+        }
+      `}</style>
     </div>
   );
 }
