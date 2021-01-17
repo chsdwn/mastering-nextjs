@@ -1,3 +1,4 @@
+import { Page } from '../components/Page';
 import styled from 'styled-components';
 
 const Title = styled.h1`
@@ -8,7 +9,7 @@ const Title = styled.h1`
 
 export default function Home() {
   return (
-    <div>
+    <Page title="Index" description="Index page" keywords="index, nextjs">
       <Title>styled-components</Title>
       <p className="title">styled-jsx</p>
       <style jsx>{`
@@ -18,6 +19,6 @@ export default function Home() {
           color: blue;
         }
       `}</style>
-    </div>
+    </Page>
   );
 }
